@@ -24,8 +24,7 @@ c & d
 \begin{pmatrix}
 m_0 \\
 m_1
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 e_0 \\
 e_1
