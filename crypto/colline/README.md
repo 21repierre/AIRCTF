@@ -81,4 +81,4 @@ c * m_2 + d * m_3 = e_3
 \end{align} \\
 $$
 
-Que le resoudre dans sage (tout est modulo 71) pour retrouver $a, b, c, d$
+Qui peut se resoudre dans sage (tout est modulo 71) pour retrouver $a, b, c, d$
