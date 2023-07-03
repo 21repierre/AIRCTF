@@ -1,5 +1,5 @@
 from hashlib import sha256
-from ecdsa import ECDSA
+from trois import ECDSA
 from Crypto.Util.number import bytes_to_long
 
 p = 0xfffffffffffffffffffffffffffffffeffffffffffffffff

@@ -1,2 +1,4 @@
 **/__pycache__/
 *.py[cod]
+crypto/colline/colline.sage.py
+crypto/colline/solve.sage.py
