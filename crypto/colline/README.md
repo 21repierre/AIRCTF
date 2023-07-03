@@ -25,7 +25,7 @@ c & d
 m_0 \\
 m_1
 \end{pmatrix}
-=
+= \\
 \begin{pmatrix}
 e_0 \\
 e_1
@@ -38,7 +38,9 @@ c * m_0 + d * m_1 = e_1
 \end{cases}\, \\
 \end{align} \\
 $$
+
 Et
+
 $$
 \begin{align}
 \begin{cases}
@@ -50,7 +52,7 @@ c & d
 m_2 \\
 m_3
 \end{pmatrix}
-=
+= \\
 \begin{pmatrix}
 e_2 \\
 e_3
@@ -63,7 +65,9 @@ c * m_2 + d * m_3 = e_3
 \end{cases}\, \\
 \end{align} \\
 $$
+
 Ce qui nous donne:
+
 $$
 \begin{align}
 & 
@@ -78,4 +82,5 @@ c * m_2 + d * m_3 = e_3
 \end{cases}\, \\
 \end{align} \\
 $$
+
 Que le resoudre dans sage (tout est modulo 71) pour retrouver $a, b, c, d$
