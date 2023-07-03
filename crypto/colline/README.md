@@ -25,7 +25,7 @@ c & d
 m_0 \\
 m_1
 \end{pmatrix}
-= \\
+=
 \begin{pmatrix}
 e_0 \\
 e_1
@@ -51,8 +51,7 @@ c & d
 \begin{pmatrix}
 m_2 \\
 m_3
-\end{pmatrix}
-= \\
+\end{pmatrix} =
 \begin{pmatrix}
 e_2 \\
 e_3
