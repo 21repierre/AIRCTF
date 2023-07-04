@@ -3,3 +3,4 @@
 crypto/colline/colline.sage.py
 crypto/colline/solve.sage.py
 reverse/keygen/keygen
+*.class
