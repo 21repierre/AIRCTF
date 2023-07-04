@@ -8,6 +8,7 @@ Bonus: génerer des clés pour n'importe quel mail
 - Code source: non
 - Tourne sur un serveur
 - 2 version du binaire (pour la difficulté): stripped/non-stripped
+- Compilation: `gcc -O2 keygen.c -o keygen && strip --strip-all keygen` / `gcc keygen.c -o keygen` 
 
 ## Solve
 
@@ -24,9 +25,12 @@ Platformes:
 
 ### Partie 2 de la clé
 
-On coupe en 2 la partie `user` de l'email et on *xor* en miroir, puis on somme le tout:
-$(u_0 \oplus u_n) + (u_1 \oplus u_{n-1}) + ... \rightarrow$ `0123`
+On coupe en 2 la partie `user` de l'email et on *and* en miroir, puis on somme le tout:
+$(u_0 \land u_n) + (u_1 \land u_{n-1}) + ... \pmod{100} \rightarrow$ `01`<br>
 En cas d'imparité de la longueur, le caractère du milieu est ignoré.
+
+On fait la meme chose avec un *xor* pour les 2 autres caractères:
+$(u_0 \oplus u_n) + (u_1 \oplus u_{n-1}) + ... \pmod{100} \rightarrow$ `23`
 
 ### Partie 3 de la clé
 
