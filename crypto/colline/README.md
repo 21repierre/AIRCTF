@@ -5,10 +5,11 @@
 Base sur le chiffrement de Hill
 
 - Code source: non
-- Tourne en local (sans la cle ni le message original)
+- Tourne en local (sans la clé ni le message original)
 - Key: [[0, 48],[66, 70]]
 - Message: `Bravo, le flag est AIRCTF{kN0Wn_pla1n_T3xt}`
 - Encrypted: `l{3R0nh0 ThCZ0A7KArR,6gvm-cUikwbhXNfwb64Kb d`
+- Difficulté: moyen/facile
 
 ## Writeup
 

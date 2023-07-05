@@ -8,7 +8,8 @@ Bonus: génerer des clés pour n'importe quel mail
 - Code source: non
 - Tourne sur un serveur
 - 2 version du binaire (pour la difficulté): stripped/non-stripped
-- Compilation: `gcc -O2 keygen.c -o keygen && strip --strip-all keygen` / `gcc keygen.c -o keygen` 
+- Compilation: `gcc -O2 keygen.c -o keygen && strip --strip-all keygen` / `gcc keygen.c -o keygen`
+- Difficulté: moyen
 
 ## Solve
 

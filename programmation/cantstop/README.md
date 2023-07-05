@@ -6,6 +6,7 @@ Saurez-vous vous arrêter?
 
 - Code source: oui
 - Tourne sur serveur
+- Difficulté: facile
 
 ## Solve
 
