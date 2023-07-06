@@ -10,6 +10,8 @@ int main(int argc, char **argv) {
     char noteEquipe[20];
     int tuyauActuel = 4;
 
+    printf("Votre chef vous a chargé d'une mission très importante:\nUn problème en amont du réseau a été détecté, vous devez fermer les vannes pour éviter d'inonder la ville.\n\n");
+
     while(1) {
         printf("Status des tuyaux: |");
         for (int i=0; i<7; i++){
@@ -52,8 +54,6 @@ int main(int argc, char **argv) {
             }
         }
     }
-
-
 
     return 0;
 }
