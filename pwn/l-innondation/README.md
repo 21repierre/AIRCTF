@@ -5,7 +5,7 @@
 Buffer-overflow
 
 - Code source: non
-- Tourne en local
+- Tourne sur serveur et en local (no flag)
 - Difficulté: facile
 - Compilation: `gcc main.c -o main -Wl,-z,relro,-z,now -no-pie`
 
