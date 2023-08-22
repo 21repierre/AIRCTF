@@ -2,13 +2,17 @@
 
 ## Description
 
-Simple chiffre de cesar sur la table ASCII.
-
-Message: `AIRCTF{v3NI_Vid1_v1c1}`
-Message chiffre: `AgoTBBUHPDd0DwogFyolciA3ciRyPg==`
-Formule: $e = m + 65 \pmod{128}$
+Nous avons intercepté un message critique mais sommes incapables de le déchiffrer sans votre aide: `AgoTBBUHPDd0DwogFyolciA3ciRyPg==`
 
 - Difficulté: intro
+
+## Fonctionnement
+
+Simple chiffre de césar sur la table ASCII le tout base64.
+
+Message: `AIRCTF{v3NI_Vid1_v1c1}`
+Message chiffré: `AgoTBBUHPDd0DwogFyolciA3ciRyPg==`
+Formule: $e = m + 65 \pmod{128}$
 
 ## Writeup
 

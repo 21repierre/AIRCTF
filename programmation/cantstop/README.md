@@ -3,10 +3,20 @@
 ## Description
 
 Saurez-vous vous arrêter?
+Votre but est d'atteindre **10000** crédits
 
-- Code source: oui
-- Tourne sur serveur
+- Resources: aucunes
 - Difficulté: facile
+- Connection: `nc <ip> 10000`
+
+## Fonctionnement
+
+- Tourne sur un serveur
+- Docker: 
+```bash
+docker build -t air-cantstop .
+docker run -p 10000:9999 -d --name=cantstop air-cantstop
+```
 
 ## Solve
 

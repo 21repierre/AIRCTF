@@ -5,6 +5,7 @@
 int parse(char* mail, char* key);
 
 int main(int argc, char **argv) {
+    setbuf(stdout, NULL);
 
     char mail[255];
     char key[16+4];
@@ -26,8 +27,10 @@ int main(int argc, char **argv) {
 
         fclose(f);
         printf("Bravo, le flag est %s\n", content);
+        exit(0);
     }
 
+    exit(0);
     return 0;
 }
 

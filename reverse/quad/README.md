@@ -2,9 +2,10 @@
 
 ## Description
 
-- Code source: oui
+- Resources: [quad.py](quad.py)
 - Tourne en local
 - Difficulté: simple
+
 
 ## Solve
 

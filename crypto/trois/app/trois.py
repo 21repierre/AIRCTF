@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from hashlib import sha256
 from secret import FLAG
 from Crypto.Util.number import bytes_to_long
@@ -95,9 +97,9 @@ def main():
         verif = curve.verify(m, (r,s), private)
         if verif:
             print(f"Bravo! Voici le secret que tu convoites tant: {FLAG}")
-            break
+            exit(0)
         else:
             print("Malheureusement cette signature est invalide, mais tu peux réessayer.")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

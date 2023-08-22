@@ -2,14 +2,26 @@
 
 ## Description
 
-Base sur le chiffrement de Hill
 
-- Code source: non
+Un de vos collegues vous explique qu'il bloque sur un code depuis le debut de semaine: «<br>
+\- Nous avons intercepté cette communication sur *passioncollines.fr* mais je n'arrive toujours pas a comprendre comment la déchiffrer. 
+Voici la transcription de la communication: »<br>
+
+> ~h1ll045> Bravo~ *(supprimé)*
+> h1ll045> l{3R0nh0 ThCZ0A7KArR,6gvm-cUikwbhXNfwb64Kb d
+
+« - Nous avons quand meme réussi a récupérer le programme qu'il a utilisé, le voici: »
+
+- Resources: [colline.sage](colline.sage)
+- Difficulté: moyen/facile
+
+## Fonctionnement
+
+- Code source: oui
 - Tourne en local (sans la clé ni le message original)
 - Key: [[0, 48],[66, 70]]
 - Message: `Bravo, le flag est AIRCTF{kN0Wn_pla1n_T3xt}`
 - Encrypted: `l{3R0nh0 ThCZ0A7KArR,6gvm-cUikwbhXNfwb64Kb d`
-- Difficulté: moyen/facile
 
 ## Writeup
 
@@ -83,3 +95,4 @@ c * m_2 + d * m_3 = e_3
 $$
 
 Qui peut se resoudre dans sage (tout est modulo 71) pour retrouver $a, b, c, d$
+Voir [solve.sage](solve.sage).

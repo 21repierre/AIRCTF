@@ -2,7 +2,7 @@ import time
 from flask import Flask, request, render_template, send_file
 from hashlib import sha1
 
-base_url = 'http://127.0.0.1:5000'
+base_url = 'http://127.0.0.1:10003'
 
 app = Flask(__name__)
 uploads = [
@@ -77,4 +77,4 @@ if __name__ == "__main__":
         url_sig = f"{base_url}/file/{upload['filename']}?exp={upload['exp']}".encode()
         print(url_sig)
         upload['sig'] = sha1(url_sig).hexdigest()
-    app.run(host="0.0.0.0", port=5000, debug = True)
+    app.run(host="0.0.0.0", port=10003, debug = True)

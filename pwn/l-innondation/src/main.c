@@ -6,7 +6,7 @@ short tuyaux[] = {1, 0, 0, 1, 1, 0, 0};
 char command[3];
 
 int main(int argc, char **argv) {
-
+    setbuf(stdout, NULL);
     char noteEquipe[20];
     int tuyauActuel = 4;
 
@@ -19,6 +19,7 @@ int main(int argc, char **argv) {
             printf(tuyaux[i] == 0 ? "Ouvert|" : "Fermé|");
         } 
         printf("\nLevier à actionner:\n1) Fermeture du tuyau\n2) Ouverture du tuyau\n3) Sélecteur de tuyau\n4) Laisser une note à l'équipe\n0) Prévenir le chef que vous avez fermé toutes les vannes\n");
+
         fgets(command, sizeof(command), stdin);
         if (command[0] == '1') {
             tuyaux[tuyauActuel] = 1;
@@ -53,6 +54,7 @@ int main(int argc, char **argv) {
                 printf("Votre chef fronce les sourcils et vous jette un regard noir, il n'a pas l'air satisfait de votre travail.\n");
             }
         }
+        printf("\n");
     }
 
     return 0;

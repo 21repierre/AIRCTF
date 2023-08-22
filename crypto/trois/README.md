@@ -2,13 +2,22 @@
 
 ## Description
 
-Ce petit serveur de signature vous fournit 3 messages avec leur signature puis vous demande de signer un message.
-Signature avec les courbes elliptiques.
+> Bienvenue sur mon serveur personnel de signature ultra-securisé.
+> Tu peux toujours essayer d'usurper mon identité mais tu n'y arriveras pas!
 
-- Code source: trois.py
+- Resources: [trois.py](trois.py)
+- Difficulté: moyenne
+- Connection: `nc <ip> 9999`
+
+## Fonctionnement
+
 - Tourne sur un serveur
-- Difficulté: moyen
+- Docker: 
+```bash
+docker build -t air-trois .
+docker run -p 9999:9999 -d --name=trois air-trois
+```
 
 ## Writeup
 
-Reutilisation du nonce qui donne facilement acces a la cle privee, cf [wikipedia](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm#Signature_generation_algorithm)
+Réutilisation du nonce qui donne facilement acces a la clé privée, cf [wikipedia](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm#Signature_generation_algorithm) et [solve.py](solve.py)

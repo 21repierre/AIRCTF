@@ -2,14 +2,23 @@
 
 ## Description
 
+- Resources: [le code source](src/keygen.c)
+- Difficulté: facile avec le source code/moyen
+- Connection: `nc <ip> 10001`
+
+## Fonctionnement
+
 Un petit keygen assez simple
 Bonus: génerer des clés pour n'importe quel mail
 
 - Code source: non
-- Tourne sur un serveur
 - 2 version du binaire (pour la difficulté): stripped/non-stripped
 - Compilation: `gcc -O2 keygen.c -o keygen && strip --strip-all keygen` / `gcc keygen.c -o keygen`
-- Difficulté: moyen
+- Docker: 
+```bash
+docker build -t air-keygen .
+docker run -p 10002:9999 -d --name=keygen air-keygen
+```
 
 ## Solve
 
