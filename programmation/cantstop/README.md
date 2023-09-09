@@ -15,7 +15,7 @@ Votre but est d'atteindre **10000** crédits
 - Docker: 
 ```bash
 docker build -t air-cantstop .
-docker run -p 10000:9999 -d --name=cantstop air-cantstop
+docker run -p 10000:10000 -d --name=air-cantstop air-cantstop
 ```
 
 ## Solve

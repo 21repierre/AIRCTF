@@ -4,7 +4,7 @@ service challenge
     type        = UNLISTED
     socket_type = stream
     protocol    = tcp
-    port        = 9999
+    port        = 10001
     wait        = no
     user        = user
     server      = /home/user/start.sh

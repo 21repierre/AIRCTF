@@ -18,7 +18,7 @@
 - Docker: 
 ```bash
 docker build -t air-innondation .
-docker run -p 10001:9999 -d --name=innondation air-innondation
+docker run -p 10001:10001 -d --name=air-innondation air-innondation
 ```
 
 ## Solve
