@@ -5,6 +5,9 @@ from secret import FLAG
 from Crypto.Util.number import bytes_to_long
 from Crypto.Random.random import randint
 
+import functools
+print = functools.partial(print, flush=True)
+
 class ECDSA:
     def __init__(self, a, b, p, G, order):
         self.a = a

@@ -2,33 +2,21 @@ import time
 from flask import Flask, request, render_template, send_file
 from hashlib import sha1
 
-base_url = 'http://127.0.0.1:10003'
+base_url = 'http://airctf.pierrebdvl.fr:10003'
 
 app = Flask(__name__)
 uploads = [
     {
-        'filename': 'flan.txt',
-        'exp': 1688578310,
+        'filename': 'flag.mp4',
+        'exp': 1698578310,
         'sig': '',
         'author': 'admin'
     },
     {
-        'filename': 'flap.txt',
-        'exp': 1688568310,
+        'filename': 'logo_air.png',
+        'exp': 1689568310,
         'sig': '',
-        'author': 'admin'
-    },
-    {
-        'filename': 'flat.txt',
-        'exp': 1688568310,
-        'sig': '',
-        'author': 'admin'
-    },
-    {
-        'filename': 'flac.txt',
-        'exp': 1688568310,
-        'sig': '',
-        'author': 'admin'
+        'author': 'AIR'
     },
     {
         'filename': 'flag.txt',

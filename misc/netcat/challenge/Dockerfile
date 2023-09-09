@@ -8,7 +8,7 @@ RUN apt-get update && \
 RUN useradd -m user && \
     chown -R root:root /home/user
 
-ADD app /home/user/
+ADD netcat.py /home/user/
 COPY xinetd /etc/xinetd.d/user
 RUN dos2unix /etc/xinetd.d/user
 
