@@ -10,7 +10,7 @@ RUN useradd -m user && \
 
 ENV LANG=C.UTF-8
 
-ADD src /home/user/
+COPY src /home/user/
 RUN gcc /home/user/keygen.c -o /home/user/keygen -O2 && \
     strip --strip-all /home/user/keygen
 
