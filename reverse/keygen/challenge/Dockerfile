@@ -19,6 +19,6 @@ RUN dos2unix /etc/xinetd.d/user
 
 WORKDIR /home/user
 
-EXPOSE 9999
+EXPOSE 10002
 
 CMD ["/usr/sbin/xinetd", "-dontfork"]

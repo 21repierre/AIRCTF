@@ -2,6 +2,11 @@
 
 ## Description
 
+> Vous souvenez vous de cette époque lointaine où vous deviez entrer une clé d'activation pour jouer à votre jeu préféré ?<br>
+> Il existait des petits programmes qui vous permettaient d'obtenir ~~illégalement~~ *gratuitement* une clé valide.
+
+Ici, c'est le principe, vous devez essayer de générer une clé valide puis de l'envoyer sur le serveur pour recevoir votre flag.
+
 - Resources: [le code source](src/keygen.c)
 - Difficulté: facile avec le source code/moyen
 - Connection: `nc <ip> 10001`
@@ -17,7 +22,7 @@ Bonus: génerer des clés pour n'importe quel mail
 - Docker: 
 ```bash
 docker build -t air-keygen .
-docker run -p 10002:9999 -d --name=keygen air-keygen
+docker run -p 10002:10002 -d --name=air-keygen air-keygen
 ```
 
 ## Solve
