@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="fr"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Page de connexion</title> 
+    <link rel="stylesheet" href="css/main.css"> 
+  </head> 
+  <body>
+    <form id="form" name="connection_form" onsubmit="event.preventDefault(); checkCredentials();">
+      <h1>Connexion</h1>
+      
+      <label for="username">Nom d'utilisateur :</label>
+      <input type="text" name="username" id="username" required autocomplete="off">
+      
+      <label for="password">Mot de passe :</label>
+      <input type="password" name="password" id="password" required autocomplete="off">
+      
+      <p id="error_msg" style="display:none;">Le nom d'utilisateur ou le mot de passe est incorrect</p>
+      
+      <input type="submit" value="Se connecter">
+    </form>
+    
+    <script type="text/javascript" src="js/main.js"></script> 
+  </body> 
+</html> 
