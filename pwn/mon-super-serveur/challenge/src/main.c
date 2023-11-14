@@ -52,7 +52,6 @@ int main(int argc, char const *argv[]) {
 
 		pthread_t c_thread;
 		pthread_create(&c_thread, NULL, handle_request, (void *) client_socket);
-		//pthread_detach(c_thread);
 	}
 
 	return 0;
@@ -66,14 +65,9 @@ void *handle_request(void *args) {
 	ssize_t recv_len = recv(client_socket, buffer, BUFFER_SIZE, 0);
 
 	if (recv_len > 0) {
-		
-		printf("test %ld\n", recv_len);
-		printf("received: %s#\n", buffer);
 		char* filename = parse_headers(buffer, recv_len);
-		printf("file:%s.\n", filename);
 
 		if (filename == NULL) {
-			printf("404\n");
 			char* response = "HTTP/1.1 404 Not Found\r\nContent-Type: text/plain\r\n\r\n404 Not Found";
 			int resp_len = strlen(response);
 			send(client_socket, response, resp_len, 0);
@@ -90,12 +84,11 @@ void *handle_request(void *args) {
 			}
 
 			close(f);
-			printf("%d, %s\n", resp_len, response);
 
 			send(client_socket, response, resp_len, 0);
+
 			free(response);
 		}
-
 
 		free(filename);
 	}
@@ -122,47 +115,41 @@ char* parse_headers(char *buff, ssize_t buff_len) {
 	regex_t regex;
 	regcomp(&regex, "^GET /([^ ]*) HTTP/1", REG_EXTENDED);
 	regmatch_t match[1];
-	printf("mathing\n");
 
 	if (regexec(&regex, firstLine, 1, match, 0) == 0) {
 		regfree(&regex);
-		printf("mathing get \n");
 
 		filename = malloc((match[0].rm_eo - match[0].rm_so - 12) * sizeof(char));
 		memcpy(filename, firstLine + match[0].rm_so + 5, match[0].rm_eo - match[0].rm_so - 12);
 		if (strcmp(filename, "index.html") != 0)	{
-			printf("wrong file");
+			printf("only index.html for now.");
 			return NULL;
 		}
 
 		int endheader = 0;
-		while (endheader + 3 < buff_len) {
-			if (*(buff + endheader) == '\r' && *(buff + endheader + 1) == '\n' && *(buff + endheader + 2) == '\r' && *(buff + endheader + 3) == '\n') {
+		while (endheader + 2 < buff_len) {
+			if (*(buff + endheader) == '\n' && *(buff + endheader + 1) == '\r' && *(buff + endheader + 2) == '\n') {
 				break;
 			}
-			endheader += 4;
+			endheader += 3;
 		}
 
-		printf("mathing end header %d\n", endheader);
 		int lastLineDelim = ++lineDelim;
 
-		while(lineDelim < endheader) {
+		while(lineDelim <= endheader) {
 			if (buff[lineDelim] == '\n') {
 
 				char *currentLine = malloc((lineDelim - lastLineDelim) * sizeof(char) + 1);
 				memcpy(currentLine, buff + lastLineDelim, lineDelim - lastLineDelim);
 				
 				parse_header(currentLine, lineDelim - lastLineDelim + 1, headerName, headerValue);
-				printf("%s:%s\n", headerName, headerValue);
 
-				//free(currentLine);
 				lastLineDelim = lineDelim;
 			}
 			lineDelim++;
 		}
 	}
 
-	//free(firstLine);
 	return filename;
 }
 
@@ -170,7 +157,6 @@ void parse_header(char *line, int line_len, char* headerName, char* headerValue)
 	int sepPos = 0;
 
 	while (line[sepPos++] != ':') {}
-	printf("%d:%d\n", sepPos+1, line_len - sepPos);
 
 	memcpy(headerName, line, sepPos-1);
 	memcpy(headerValue, line + sepPos+1, line_len - sepPos);

