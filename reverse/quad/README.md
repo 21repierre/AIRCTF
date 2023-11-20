@@ -13,7 +13,6 @@ On doit fournir 8 nombres: $a_i, i \in \{0,...,7\}$
 Le script vérifie alors que pour $i \in \{0,2,4,6\}$:
 
 $$
-\DeclareMathOperator{\tr}{tr}
 \begin{align}
     & \begin{cases}
         \det
@@ -21,7 +20,7 @@ $$
         a_i & 0 \\
         0 & a_{i+1} \\
         \end{pmatrix} & =u_i \\
-        \tr{
+        tr{
         \begin{pmatrix}
         a_i & 0 \\
         0 & a_{i+1} \\
