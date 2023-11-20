@@ -22,4 +22,4 @@ Cela nous permet de lire la mémoire et notamment de récupérer la valeur du *c
 Ensuite, la fonction demandant la direction est vulnérable a un buffer overflow nous permettant de ré-écrire l'adresse de retour vers la fonction `win`.
 C'est ici que le canary précedement trouvé entre en jeu pour ne pas faire planter le programme.
 
-Voir [solve.py](solution/solve.py)
+Voir [solve.py](solve/solve.py)
