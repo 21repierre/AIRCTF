@@ -20,6 +20,7 @@ public class Solve {
 
 
 class ReplicatedRandom extends Random {
+    // From: https://github.com/fta2012/ReplicatedRandom/tree/master
     // Replicate the state of a Random using a single value from its nextDouble
     public boolean replicateState(double nextDouble) {
         // nextDouble() is generated from ((next(26) << 27) + next(27)) / (1L << 53)

