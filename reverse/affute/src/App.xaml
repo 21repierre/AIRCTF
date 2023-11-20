@@ -1,0 +1,10 @@
+﻿<Application x:Class="affute.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:affute"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ImageSource x:Key="logo_air">pictures\logo_air.png</ImageSource>
+    </Application.Resources>
+</Application>

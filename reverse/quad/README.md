@@ -16,10 +16,11 @@ $$
 \DeclareMathOperator{\tr}{tr}
 \begin{align}
     & \begin{cases}
-        \begin{vmatrix}
+        \det
+        \begin{pmatrix}
         a_i & 0 \\
         0 & a_{i+1} \\
-        \end{vmatrix} & =u_i \\
+        \end{pmatrix} & =u_i \\
         \tr{
         \begin{pmatrix}
         a_i & 0 \\

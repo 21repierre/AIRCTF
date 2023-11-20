@@ -18,7 +18,7 @@
 - Docker: 
 ```bash
 docker build -t air-innondation .
-docker run -p 10001:9999 -d --name=innondation air-innondation
+docker run -p 10001:10001 -d --name=air-innondation air-innondation
 ```
 
 ## Solve
@@ -26,4 +26,4 @@ docker run -p 10001:9999 -d --name=innondation air-innondation
 Buffer overflow dans la commande 4: 48 bytes puis on ecrit sur `i`.
 Il suffit de faire ca pour chaque tuyau et de le fermer.
 
-Cf [exploit.py](exploit.py)
+Cf [exploit.py](solution/exploit.py)

@@ -1,0 +1,13 @@
+service cantstop
+{
+    disable     = no
+    type        = UNLISTED
+    socket_type = stream
+    protocol    = tcp
+    port        = 10000
+    wait        = no
+    user        = user
+    server      = /bin/sh
+    server_args = -c cd${IFS}/home/user;/usr/bin/java${IFS}Cantstop
+    flags       = IPv4
+}

@@ -2,6 +2,11 @@
 
 ## Description
 
+> Vous souvenez vous de cette époque lointaine où vous deviez entrer une clé d'activation pour jouer à votre jeu préféré ?<br>
+> Il existait des petits programmes qui vous permettaient d'obtenir ~~illégalement~~ *gratuitement* une clé valide.
+
+Ici, c'est le principe, vous devez essayer de générer une clé valide puis de l'envoyer sur le serveur pour recevoir votre flag.
+
 - Resources: [le code source](src/keygen.c)
 - Difficulté: facile avec le source code/moyen
 - Connection: `nc <ip> 10001`
@@ -17,7 +22,7 @@ Bonus: génerer des clés pour n'importe quel mail
 - Docker: 
 ```bash
 docker build -t air-keygen .
-docker run -p 10002:9999 -d --name=keygen air-keygen
+docker run -p 10002:10002 -d --name=air-keygen air-keygen
 ```
 
 ## Solve
@@ -52,6 +57,6 @@ Clé: $k_{0,0}k_{0,1}k_{0,2}k_{0,3}-k_{1,0}k_{1,1}k_{1,2}k_{1,3}-k_{2,0}k_{2,1}k
 
 $k_{3,i} = 32 + k_{0,i} \oplus k_{1,i} \oplus k_{2,i} \pmod{127}$ 
 
-Exemple (cf [solve.py](solve.py)): 
+Exemple (cf [solve.py](solution/solve.py)): 
 - Mail: `test@ea.com`
 - Clé: `MPEA-1322-0491-lwnb`

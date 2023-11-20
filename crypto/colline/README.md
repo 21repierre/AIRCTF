@@ -95,4 +95,4 @@ c * m_2 + d * m_3 = e_3
 $$
 
 Qui peut se resoudre dans sage (tout est modulo 71) pour retrouver $a, b, c, d$
-Voir [solve.sage](solve.sage).
+Voir [solve.sage](solution/solve.sage).
