@@ -1,3 +1,3 @@
 # CTF
 
-Challenge pour le "capture the flag" de l'AIR. 
+Challenges pour le "capture the flag" de l'AIR. 
